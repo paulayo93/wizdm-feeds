@@ -19,24 +19,7 @@ import {
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { DatabaseComponent } from './database/database.component';
-import { NotFoundComponent } from './not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ConnectModule, ConnectConfig, AuthModule, DatabaseModule, UploaderModule } from './connect';
-
-// Firebase configuration for wizdm experiments
-const config: ConnectConfig = {
-  appname: 'wizdm-experiments',
-  firebase: {
-    apiKey: "AIzaSyDhq3U__FKV4IUCvl02s5jVgChisX2jcmY",
-    authDomain: "wizdm-experiments.firebaseapp.com",
-    databaseURL: "https://wizdm-experiments.firebaseio.com",
-    projectId: "wizdm-experiments",
-    storageBucket: "wizdm-experiments.appspot.com",
-    messagingSenderId: "479013715916"
-  }
-};
 
 @NgModule({
   imports:      [   
@@ -57,18 +40,11 @@ const config: ConnectConfig = {
     MatDividerModule,
     MatListModule,
 
-    // Initialize the connect module
-    ConnectModule.init(config),
-    AuthModule, 
-    DatabaseModule,
     AppRoutingModule
   ],
   
   declarations: [ 
     AppComponent, 
-    LoginComponent, 
-    NotFoundComponent, 
-    DatabaseComponent
   ],
 
   providers: [],
