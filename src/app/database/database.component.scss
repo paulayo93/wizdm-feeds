@@ -1,0 +1,18 @@
+
+:host {
+  position: relative;
+  display: block;
+  margin-top: 20px;
+}
+
+.doc {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.stick {
+  position: sticky;
+  top: 20px;
+}

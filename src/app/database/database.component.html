@@ -1,0 +1,40 @@
+<div fxFill fxLayout="row" fxLayoutAlign="space-around start">
+
+  <div class="stick" fxFlex="50" fxLayout="column" fxLayoutAlign="start center">
+
+    <h1 class="mat-title">Database</h1>
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Collection name</mat-label>
+      <input matInput [(ngModel)]="collection" />
+      <button mat-button matSuffix (click)="delete()">Wipe</button>
+    </mat-form-field>
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Number of documents</mat-label>
+      <input matInput [(ngModel)]="count" />
+      <button mat-button matSuffix (click)="fillUp()">Generate</button>
+    </mat-form-field>
+
+    <p *ngIf="count$ | async as count">{{ count }} documents available</p>
+
+  </div>
+
+  <div fxFlex="50" fxLayout="column" fxLayoutAlign="start start">
+
+    <ng-container *ngIf="display">
+
+      <div class="doc" *ngFor="let doc of docs$ | async; let i = index">
+        <strong>{{ i+1 }} - {{ doc.name }}</strong>
+        <div>{{ doc.motto }}</div>
+        <div>{{ doc.country }}</div>
+      </div>
+
+      <button *ngIf="!(page.loading$ | async)" mat-button [disabled]="page.done$ | async" (click)="more()">More</button>
+      
+      <mat-spinner *ngIf="page.loading$ | async" diameter="60" strokeWidth="2"></mat-spinner>
+
+    </ng-container>
+  </div>
+    
+</div>
