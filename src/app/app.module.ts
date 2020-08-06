@@ -12,6 +12,9 @@ import {ConnectModule} from '@wizdm/connect';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { MatIconModule } from '@angular/material/icon';
+import {AvatarComponent} from '@wizdm/elements/avatar';
+
 @NgModule({
   imports:      [   
     BrowserModule, 
@@ -20,11 +23,19 @@ import { AppRoutingModule } from './app-routing.module';
     ReactiveFormsModule,
     FlexLayoutModule, 
 
+    MatIconModule,
+
+    AnimateModule,
+    ElementsModule,
+    EmojiSupportModule,
+
     AppRoutingModule
   ],
   
   declarations: [ 
     AppComponent, 
+    AvatarComponent,
+
   ],
 
   providers: [],

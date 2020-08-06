@@ -1,0 +1,26 @@
+  <!-- Headibng banner -->
+<div class="cover">
+  <img *ngIf="content.cover" [src]="content.cover" (error)="content.cover = null" />
+
+  <!-- Cover picture loader -->
+  <button mat-icon-button class="tools">
+    <mat-icon>insert_photo</mat-icon>
+  </button>
+</div>
+
+<!-- Card content --> 
+<div class="content">
+  <div class="overlap">
+    <wm-avatar [src]="card.avatar" [color]="avatarColor"></wm-avatar>
+  </div>
+  <div class="title">{{ content.title }}</div>
+  <div class="author">{{ content.author }}</div>
+  <p>{{ content.pitch }}</p>
+
+  <!-- Theme color picker -->
+  <!-- <wm-color-picker (pick)="setColor($event)" class="color">
+    <button mat-icon-button class="tools">
+      <mat-icon>brush</mat-icon>
+    </button>
+ </wm-color-picker> -->
+</div>
