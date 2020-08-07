@@ -15,7 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { MatIconModule } from '@angular/material/icon';
 import {AvatarComponent} from '@wizdm/elements/avatar';
 import {MatCardModule} from '@angular/material/card';
-
+import {MatButtonModule} from '@angular/material/button'
 @NgModule({
   imports:      [   
     BrowserModule, 
@@ -26,6 +26,7 @@ import {MatCardModule} from '@angular/material/card';
 
     MatIconModule,
     MatCardModule,
+    MatButtonModule,
 
     AnimateModule,
     ElementsModule,
