@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { MatIconModule } from '@angular/material/icon';
 import {AvatarComponent} from '@wizdm/elements/avatar';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   imports:      [   
@@ -24,6 +25,7 @@ import {AvatarComponent} from '@wizdm/elements/avatar';
     FlexLayoutModule, 
 
     MatIconModule,
+    MatCardModule,
 
     AnimateModule,
     ElementsModule,
