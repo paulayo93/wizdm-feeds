@@ -1,6 +1,6 @@
 <ng-container *ngIf="card">
-	<section fxLayout="column" fxLayoutAlign="center center">
-		<mat-card class="wm-card">
+	<section fxLayout="column" fxLayoutAlign="center center" style="border: 1px solid red;">
+		<mat-card class="wm-card" style="border: 1px solid red;">
 			<mat-card-header>
 				<div mat-card-avatar>
 					<wm-avatar [src]="card.avatar"></wm-avatar>
@@ -15,16 +15,19 @@
         </mat-card-title>
 				
 			</mat-card-header>
-			<mat-card-content>
-				<p>
+			<mat-card-content style="border: 1px solid red;">
+        <div>
+	<p>
 					{{card.postMsg}}
 				</p>
-				<img mat-card-image [src]="card.postImage" alt="Wizdm Photo">
+        </div>
+			
+				<img style="border: 1px solid red; width: " mat-card-image [src]="card.postImage" alt="Wizdm Photo">
 
 		</mat-card-content>
-				<mat-card-actions>
+				<mat-card-actions style="border: 1px solid red;">
 					<button  mat-flat-button>COMMENT</button>
-					<button color="primary" mat-flat-button>LIKE</button>
+					<button mat-flat-button>LIKE</button>
 				</mat-card-actions>
 		</mat-card>
 
