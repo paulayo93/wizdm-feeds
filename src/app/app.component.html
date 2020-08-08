@@ -1,25 +1,34 @@
-<ng-container *ngIf="card"> 
-<section fxLayout="column" fxLayoutAlign="center center">
-	<mat-card class="wm-card">
-		<mat-card-header>
-			<div mat-card-avatar><wm-avatar [src]="card.avatar"></wm-avatar></div>
-			<mat-card-title>{{card.username}}</mat-card-title>
-			<mat-card-subtitle>59 mins</mat-card-subtitle>
-		</mat-card-header>
-		<mat-card-content>
-			<p>
-          {{card.postMsg}}
-			</p>
-		<img mat-card-image [src]="card.postImage" alt="Wizdm Photo">
+<ng-container *ngIf="card">
+	<section fxLayout="column" fxLayoutAlign="center center">
+		<mat-card class="wm-card">
+			<mat-card-header>
+				<div mat-card-avatar>
+					<wm-avatar [src]="card.avatar"></wm-avatar>
+				</div>
+				<mat-card-title>{{card.username}}
+          <!-- <div matLine> -->
+					<mat-card-subtitle>
+            <div matLine>59 mins</div>
+            </mat-card-subtitle>
+				<!-- </div> -->
+
+        </mat-card-title>
+				
+			</mat-card-header>
+			<mat-card-content>
+				<p>
+					{{card.postMsg}}
+				</p>
+				<img mat-card-image [src]="card.postImage" alt="Wizdm Photo">
 
 		</mat-card-content>
-		<mat-card-actions>
-			<button  mat-flat-button>COMMENT</button>
-			<button color="primary" mat-flat-button>LIKE</button>
-		</mat-card-actions>
-	</mat-card>
+				<mat-card-actions>
+					<button  mat-flat-button>COMMENT</button>
+					<button color="primary" mat-flat-button>LIKE</button>
+				</mat-card-actions>
+		</mat-card>
 
 
-</section>
+	</section>
 
 </ng-container>
