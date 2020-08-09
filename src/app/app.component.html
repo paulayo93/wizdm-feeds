@@ -1,6 +1,6 @@
 <ng-container *ngIf="card">
-	<section fxLayout="column" fxLayoutAlign="center center" style="border: 1px solid red;">
-		<mat-card class="wm-card" style="border: 1px solid red;">
+	<section fxLayout="column" fxLayoutAlign="center center">
+		<mat-card class="wm-card mat-elevation-z24">
 			<mat-card-header>
 				<div mat-card-avatar>
 					<wm-avatar [src]="card.avatar"></wm-avatar>
@@ -8,26 +8,26 @@
 				<mat-card-title>{{card.username}}
           <!-- <div matLine> -->
 					<mat-card-subtitle>
-            <div matLine>59 mins</div>
+            <div>59 mins</div>
             </mat-card-subtitle>
 				<!-- </div> -->
 
         </mat-card-title>
 				
 			</mat-card-header>
-			<mat-card-content style="border: 1px solid red;">
+			<mat-card-content>
         <div>
 	<p>
 					{{card.postMsg}}
 				</p>
         </div>
 			
-				<img style="border: 1px solid red; width: " mat-card-image [src]="card.postImage" alt="Wizdm Photo">
+				<img  mat-card-image [src]="card.postImage" alt="Wizdm Photo">
 
 		</mat-card-content>
-				<mat-card-actions style="border: 1px solid red;">
-					<button  mat-flat-button>COMMENT</button>
-					<button mat-flat-button>LIKE</button>
+				<mat-card-actions>
+					<button  mat-flat-button>Comment</button>
+					<button mat-flat-button>Like</button>
 				</mat-card-actions>
 		</mat-card>
 

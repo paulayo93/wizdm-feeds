@@ -1,13 +1,14 @@
 import { Component, OnInit, OnDestroy, ViewChild } from "@angular/core";
 
 export interface wmCard {
-  username?: string;
-  moreVert?: string;
-  userImage?: string;
-  avatar?: string;
-  postMsg?: string;
-  postImage? : string;
-  color?: string;
+  username?: string,
+  moreVert?: string,
+  userImage?: string,
+  avatar?: string,
+  postMsg?: string,
+  postImage? : string,
+  color?: string,
+  created?: string
 }
 
 @Component({
