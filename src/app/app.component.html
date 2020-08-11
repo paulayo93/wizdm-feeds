@@ -18,10 +18,16 @@
         </div>
 				<img  mat-card-image [src]="card.postImage" alt="Wizdm Photo">
 		</mat-card-content>
-				<mat-card-actions>
-					<button  mat-icon-button>Like</button>
-					<button mat-icon-button>Comment</button>
-					<button mat-icon-button>Share</button>
+				<mat-card-actions fxLayout="row" >
+					<button  mat-icon-button>
+            <wm-icon [icon]="thumb"></wm-icon>
+            Like</button>
+					<button mat-icon-button>
+            <wm-icon [icon]="comment"></wm-icon>
+            Comment</button>
+					<button  mat-icon-button>
+              <wm-icon [icon]="share">like</wm-icon>
+            Share</button>
 
 				</mat-card-actions>
 		</mat-card>
