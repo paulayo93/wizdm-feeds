@@ -14,7 +14,9 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { MatIconModule } from '@angular/material/icon';
 import {AvatarComponent} from '@wizdm/elements/avatar';
-
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button'
+import { IconModule } from '@wizdm/elements/icon';
 @NgModule({
   imports:      [   
     BrowserModule, 
@@ -24,10 +26,13 @@ import {AvatarComponent} from '@wizdm/elements/avatar';
     FlexLayoutModule, 
 
     MatIconModule,
+    MatCardModule,
+    MatButtonModule,
 
     AnimateModule,
     ElementsModule,
     EmojiSupportModule,
+    IconModule,
 
     AppRoutingModule
   ],

@@ -1,26 +1,37 @@
-  <!-- Headibng banner -->
-<div class="cover">
-  <img *ngIf="content.cover" [src]="content.cover" (error)="content.cover = null" />
+<ng-container *ngIf="card">
+	<section fxLayout="column" fxLayoutAlign="center center">
+		<mat-card class="wm-card mat-elevation-z24">
+			<mat-card-header>
+				<div mat-card-avatar>
+					<wm-avatar [src]="card.avatar"></wm-avatar>
+				</div>
+				<mat-card-title>{{card.username}}
+					<mat-card-subtitle>
+            <div>59 mins</div>
+            </mat-card-subtitle>
+        </mat-card-title>
+			</mat-card-header>
+			<mat-card-content>
+        <div>
+	<p>{{card.postMsg}}</p>
+        </div>
+				<img  mat-card-image [src]="card.postImage" alt="Wizdm Photo">
+		</mat-card-content>
+				<mat-card-actions fxLayout="row" fxLayoutAlign="start end">
+					<button  mat-button>
+            <wm-icon [icon]="thumbs-up"></wm-icon>
+            Like</button>
+					<button mat-button>
+            <wm-icon [icon]="comment"></wm-icon>
+            Comment</button>
+					<button  mat-button>
+              <wm-icon [icon]="share">like</wm-icon>
+            Share</button>
 
-  <!-- Cover picture loader -->
-  <button mat-icon-button class="tools">
-    <mat-icon>insert_photo</mat-icon>
-  </button>
-</div>
+				</mat-card-actions>
+		</mat-card>
 
-<!-- Card content --> 
-<div class="content">
-  <div class="overlap">
-    <wm-avatar [src]="card.avatar" [color]="avatarColor"></wm-avatar>
-  </div>
-  <div class="title">{{ content.title }}</div>
-  <div class="author">{{ content.author }}</div>
-  <p>{{ content.pitch }}</p>
 
-  <!-- Theme color picker -->
-  <!-- <wm-color-picker (pick)="setColor($event)" class="color">
-    <button mat-icon-button class="tools">
-      <mat-icon>brush</mat-icon>
-    </button>
- </wm-color-picker> -->
-</div>
+	</section>
+
+</ng-container>
